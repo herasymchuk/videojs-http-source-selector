@@ -5,11 +5,10 @@ class SourceMenuItem extends MenuItem
 {
   constructor(player, options)
   {
-    super(player, options);
     options.selectable = true;
-    //var qualityLevels = this.player().qualityLevels();
-
-    //qualityLevels.on('change', videojs.bind(this, this.update));
+    super(player, options);
+    const qualityLevels = this.player().qualityLevels();
+    qualityLevels.on('change', videojs.bind(this, this.update));
     //this.player.on('resolutionchange', videojs.bind(this, this.update));
   }
 
