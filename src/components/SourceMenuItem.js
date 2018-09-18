@@ -7,6 +7,7 @@ class SourceMenuItem extends MenuItem
   {
     options.selectable = true;
     super(player, options);
+    this.update();
     const qualityLevels = this.player().qualityLevels();
     qualityLevels.on('change', videojs.bind(this, this.update));
     //this.player.on('resolutionchange', videojs.bind(this, this.update));
