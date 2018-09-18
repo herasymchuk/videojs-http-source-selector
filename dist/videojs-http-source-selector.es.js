@@ -64,6 +64,7 @@ var SourceMenuItem = function (_MenuItem) {
 
     var _this = possibleConstructorReturn(this, _MenuItem.call(this, player, options));
 
+    _this.update();
     var qualityLevels = _this.player().qualityLevels();
     qualityLevels.on('change', videojs.bind(_this, _this.update));
     //this.player.on('resolutionchange', videojs.bind(this, this.update));
